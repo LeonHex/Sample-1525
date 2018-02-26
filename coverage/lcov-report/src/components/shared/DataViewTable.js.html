@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/shared/DataViewTable.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/shared</a> DataViewTable.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/110</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.15% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.12% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>47/109</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+  This is a customized wrapper for React-Table.
+  This component's functionalities are based on current requirements
+*/
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactTable from 'react-table';
+import _ from 'lodash';
+&nbsp;
+export default class DataViewTable extends React.Component {
+  constructor(props) {
+    super(props);
+    this.idKey = props.idKey;
+    this.hasCheckbox = Boolean(props.onSelectChange);
+    this.columnTooltips = {};
+&nbsp;
+    this.state = {
+      partialSelection: false,
+      selectedList: _.cloneDeep(props.initSelectedItems),
+      tooltip: props.columns.filter(item =&gt; item.sortable)
+        .map(<span class="fstat-no" title="function not covered" >it</span>em =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+          id: item.id,
+          tooltip: item.sortTooltip.asc
+        })),
+      columnWidths: [],
+      currentSort: _.cloneDeep(props.initialSort),
+      displayedColumns: this.createColumns(props)
+    };
+&nbsp;
+    this.resizeColumns = this.resizeColumns.bind(this);
+    this.windowResizeHandler = this.windowResizeHandler.bind(this);
+    this.sortChangeHandler = this.sortChangeHandler.bind(this);
+    this.tdPropsHandler = this.tdPropsHandler.bind(this);
+    this.selectAllHandler = this.selectAllHandler.bind(this);
+    this.itemCheckChangeHandler = this.itemCheckChangeHandler.bind(this);
+  }
+&nbsp;
+  componentDidMount() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.getComponentDOM) {
+      this.props.getComponentDOM(this.rtDOM);
+    }
+    this.setColumnWidths(this.state.displayedColumns, $(this.rtDOM).width(), this.props.hideColumnSequence);
+    $(window).resize(this.windowResizeHandler);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillReceiveProps(nextProps) {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      currentSort: nextProps.initialSort
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    $(window).off('resize', this.windowResizeHandler);</span>
+  }
+&nbsp;
+  setColumnWidths(cols, availableWidth, hideSeq) {
+    const columnWidths = [];
+    let totalColumnFixedWidth = 0;
+    let totalColumnResizableWidth = 0;
+    const tempColumns = _.cloneDeep(cols);
+    tempColumns.forEach((item) =&gt; {
+      item.show = true;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (item.resizable) {
+        totalColumnResizableWidth += item.minWidth;
+      } else {
+<span class="cstat-no" title="statement not covered" >        totalColumnFixedWidth += item.width;</span>
+      }
+    });
+    const hideSequence = _.cloneDeep(hideSeq);
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (availableWidth &lt; totalColumnFixedWidth + totalColumnResizableWidth) {
+<span class="cstat-no" title="statement not covered" >      while (hideSequence.length &gt; 0) {</span>
+        const tempHide = <span class="cstat-no" title="statement not covered" >_.find(tempColumns, { id: hideSequence.shift() });</span>
+<span class="cstat-no" title="statement not covered" >        if (tempHide.resizable) {</span>
+<span class="cstat-no" title="statement not covered" >          totalColumnResizableWidth -= tempHide.minWidth;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          totalColumnFixedWidth -= tempHide.width;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        tempHide.show = false;</span>
+<span class="cstat-no" title="statement not covered" >        if (availableWidth &gt; totalColumnFixedWidth + totalColumnResizableWidth) {</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        }
+      }
+    }
+&nbsp;
+    tempColumns.forEach((item) =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (item.show) {
+        columnWidths.push({
+          id: item.id,
+          value: item.resizable ? (item.minWidth * (availableWidth - totalColumnFixedWidth)) / totalColumnResizableWidth : <span class="branch-1 cbranch-no" title="branch not covered" >item.width</span>
+        });
+      }
+    });
+    this.setState({
+      columnWidths,
+      displayedColumns: tempColumns
+    });
+    console.log($('#root').width());
+    console.log($(this.rtDOM).width());
+    console.log($('.cdm-DVT').width());
+    console.log(columnWidths);
+    return columnWidths;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  wi</span>ndowResizeHandler(event, params) {
+<span class="cstat-no" title="statement not covered" >    if (params !== 'noColumnWidthReset') {</span>
+<span class="cstat-no" title="statement not covered" >      this.setColumnWidths(this.state.displayedColumns, $(this.rtDOM).width(), this.props.hideColumnSequence);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>sizeColumns(newResized) {
+    const resizedColumnWidths = <span class="cstat-no" title="statement not covered" >_.cloneDeep(this.state.columnWidths);</span>
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; resizedColumnWidths.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >      for (let j = 0; j &lt; newResized.length; j += 1) {</span>
+<span class="cstat-no" title="statement not covered" >        if (newResized[j].id === resizedColumnWidths[i].id &amp;&amp; newResized[j].value !== resizedColumnWidths[i].value) {</span>
+          const leftColumnMinWidth = <span class="cstat-no" title="statement not covered" >_.find(this.state.displayedColumns, { id: resizedColumnWidths[i].id }).minWidth;</span>
+<span class="cstat-no" title="statement not covered" >          if (i === resizedColumnWidths.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >            resizedColumnWidths[i].value = newResized[j].value &gt; leftColumnMinWidth ? newResized[j].value : leftColumnMinWidth;</span>
+          } else {
+            const affectedWidth = <span class="cstat-no" title="statement not covered" >resizedColumnWidths[i].value + resizedColumnWidths[i + 1].value;</span>
+            const rightColumnMinWidth = <span class="cstat-no" title="statement not covered" >_.find(this.state.displayedColumns, { id: resizedColumnWidths[i + 1].id }).minWidth;</span>
+<span class="cstat-no" title="statement not covered" >            if (newResized[j].value &gt; leftColumnMinWidth) {</span>
+<span class="cstat-no" title="statement not covered" >              if (affectedWidth - newResized[j].value &gt; rightColumnMinWidth) {</span>
+<span class="cstat-no" title="statement not covered" >                resizedColumnWidths[i].value = newResized[j].value;</span>
+<span class="cstat-no" title="statement not covered" >                resizedColumnWidths[i + 1].value = affectedWidth - newResized[j].value;</span>
+              } else {
+<span class="cstat-no" title="statement not covered" >                resizedColumnWidths[i].value = affectedWidth - rightColumnMinWidth;</span>
+<span class="cstat-no" title="statement not covered" >                resizedColumnWidths[i + 1].value = rightColumnMinWidth;</span>
+              }
+            } else {
+<span class="cstat-no" title="statement not covered" >              resizedColumnWidths[i].value = leftColumnMinWidth;</span>
+<span class="cstat-no" title="statement not covered" >              resizedColumnWidths[i + 1].value = affectedWidth - leftColumnMinWidth;</span>
+            }
+          }
+<span class="cstat-no" title="statement not covered" >          this.setState({ columnWidths: resizedColumnWidths });</span>
+<span class="cstat-no" title="statement not covered" >          $(window).trigger('resize', ['noColumnWidthReset']);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
+        }
+      }
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>lectAllHandler() {
+    let tempSelected;
+<span class="cstat-no" title="statement not covered" >    if (this.state.selectedList.length === this.props.data.length) {</span>
+<span class="cstat-no" title="statement not covered" >      tempSelected = [];</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      tempSelected = this.props.data.map(<span class="fstat-no" title="function not covered" >it</span>em =&gt; <span class="cstat-no" title="statement not covered" >item[this.idKey])</span>;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      selectedList: tempSelected,
+      partialSelection: false
+    });
+<span class="cstat-no" title="statement not covered" >    this.props.onSelectChange(tempSelected);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  it</span>emCheckChangeHandler(id) {
+    let result;
+<span class="cstat-no" title="statement not covered" >    if (this.state.selectedList.indexOf(id) !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >      result = _.without(this.state.selectedList, id);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      result = this.state.selectedList.concat(id);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      selectedList: result,
+      partialSelection: result.length &lt; this.props.data.length &amp;&amp; result.length &gt; 0
+    });
+<span class="cstat-no" title="statement not covered" >    this.props.onSelectChange(result);</span>
+  }
+&nbsp;
+  createColumns(props) {
+    const columnsArr = props.columns.map((item) =&gt; {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (item.sortable) {
+<span class="cstat-no" title="statement not covered" >        this.columnTooltips[`${item.id}false`] = item.sortTooltip.asc;</span>
+<span class="cstat-no" title="statement not covered" >        this.columnTooltips[`${item.id}true`] = item.sortTooltip.desc;</span>
+      }
+      return {
+        Header: () =&gt; (&lt;div className="header-content"&gt;{item.title}&lt;/div&gt;),
+        accessor: '',
+        id: item.id,
+        resizable: item.resizable,
+        width: item.width,
+        minWidth: item.minWidth,
+        show: true,
+        sortable: item.sortable,
+        Cell: item.Cell
+      };
+    });
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.hasCheckbox) {
+<span class="cstat-no" title="statement not covered" >      columnsArr.unshift({</span>
+        Header: <span class="fstat-no" title="function not covered" >()</span> =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;label</span>
+            htmlFor="checkboxInput"
+            className={
+              this.state.partialSelection ? ('co-checkbox partial-checked') : 'co-checkbox'
+            }
+          &gt;
+            &lt;input
+              id="checkboxInput"
+              type="checkbox"
+              onChange={this.selectAllHandler}
+              checked={this.state.selectedList.length === this.props.data.length}
+            /&gt;
+            &lt;span /&gt;
+          &lt;/label&gt;),
+        accessor: '',
+        id: 'checkbox',
+        resizable: false,
+        width: 33,
+        sortable: false,
+        Cell: <span class="fstat-no" title="function not covered" >ro</span>wInfo =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;label htmlFor={rowInfo.value[this.idKey]} className="co-checkbox"&gt;</span>
+            &lt;input
+              id={rowInfo.value[this.idKey]}
+              type="checkbox"
+              onChange={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.itemCheckChangeHandler(rowInfo.value[this.idKey])}</span>
+              checked={this.state.selectedList.indexOf(rowInfo.value[this.idKey]) &gt;= 0}
+            /&gt;
+            &lt;span /&gt;
+          &lt;/label&gt;
+        )
+      });
+    }
+    return columnsArr;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  so</span>rtChangeHandler(newSorted, column, shiftKey) {
+    const newToolTip = <span class="cstat-no" title="statement not covered" >_.clone(this.state.tooltip);</span>
+<span class="cstat-no" title="statement not covered" >    if (_.find(this.state.tooltip, { id: column.id }) &amp;&amp; this.props.sortByColumn) {</span>
+      const tempSort = <span class="cstat-no" title="statement not covered" >_.cloneDeep(this.state.currentSort);</span>
+<span class="cstat-no" title="statement not covered" >      if (column.id === tempSort[0].id) {</span>
+<span class="cstat-no" title="statement not covered" >        tempSort[0].desc = !tempSort[0].desc;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        tempSort[0].id = column.id;</span>
+<span class="cstat-no" title="statement not covered" >        tempSort[0].desc = false;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      _.find(newToolTip, { id: column.id }).tooltip = this.columnTooltips[`${tempSort[0].id}${tempSort[0].desc}`];</span>
+<span class="cstat-no" title="statement not covered" >      this.props.sortByColumn(tempSort[0].id, tempSort[0].desc);</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        selectedList: [],
+        partialSelection: false,
+        tooltip: newToolTip,
+        currentSort: tempSort
+      });
+    }
+  }
+&nbsp;
+  tdPropsHandler(state, rowInfo, column, instance) {
+    return {
+      onClick: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        if (column.id !== 'checkbox' &amp;&amp; this.props.onRowClicked) {</span>
+<span class="cstat-no" title="statement not covered" >          this.props.onRowClicked(rowInfo.original);</span>
+        }
+      }
+    };
+  }
+&nbsp;
+  render() {
+    var divStyle = {
+      color: 'white',
+      width: '1024px',
+      display: 'block'
+    };
+&nbsp;
+    return (
+      &lt;div className="cdm-DVT" style={divStyle} ref={(dom) =&gt; { this.rtDOM = dom; }}&gt;
+        &lt;ReactTable
+          className="-highlight"
+          noDataText={this.props.noDataText}
+          data={this.props.data}
+          columns={this.state.displayedColumns}
+          loading={this.props.loading}
+          showPagination={false}
+          minRows={0}
+          sorted={this.state.currentSort}
+          resized={this.state.columnWidths}
+          onSortedChange={this.sortChangeHandler}
+          getTdProps={this.tdPropsHandler}
+          onResizedChange={this.resizeColumns}
+          manual
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+DataViewTable.propTypes = {
+  loading: PropTypes.bool,
+  data: PropTypes.arrayOf(PropTypes.object),
+  idKey: PropTypes.string,
+  onSelectChange: PropTypes.func,
+  onRowClicked: PropTypes.func,
+  columns: PropTypes.arrayOf(PropTypes.object),
+  getComponentDOM: PropTypes.func,
+  noDataText: PropTypes.string,
+  initialSort: PropTypes.arrayOf(PropTypes.object),
+  sortByColumn: PropTypes.func,
+  initSelectedItems: PropTypes.arrayOf(PropTypes.string),
+  hideColumnSequence: PropTypes.arrayOf(PropTypes.string)
+};
+&nbsp;
+DataViewTable.defaultProps = {
+  loading: false,
+  data: [],
+  idKey: '',
+  onSelectChange: undefined,
+  onRowClicked: undefined,
+  columns: [],
+  getComponentDOM: <span class="fstat-no" title="function not covered" >()</span> =&gt; {},
+  noDataText: '',
+  initialSort: undefined,
+  sortByColumn: undefined,
+  initSelectedItems: [],
+  hideColumnSequence: []
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 26 2018 16:17:49 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
