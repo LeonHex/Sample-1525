@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519622269144" clover="3.2.0">
-  <project timestamp="1519622269144" name="All files">
-    <metrics statements="138" coveredstatements="73" conditionals="54" coveredconditionals="7" methods="30" coveredmethods="15" elements="222" coveredelements="95" complexity="0" loc="138" ncloc="138" packages="2" files="3" classes="3">
+<coverage generated="1519622634125" clover="3.2.0">
+  <project timestamp="1519622634125" name="All files">
+    <metrics statements="138" coveredstatements="74" conditionals="54" coveredconditionals="7" methods="30" coveredmethods="15" elements="222" coveredelements="96" complexity="0" loc="138" ncloc="138" packages="2" files="3" classes="3">
       <package name="__test__">
         <metrics statements="29" coveredstatements="26" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <file name="setupFile.js" path="/home/lyang/Src/Sample-1525/__test__/setupFile.js">
@@ -41,9 +41,9 @@
         </file>
       </package>
       <package name="src.components.shared">
-        <metrics statements="109" coveredstatements="47" conditionals="50" coveredconditionals="7" methods="26" coveredmethods="12"/>
+        <metrics statements="109" coveredstatements="48" conditionals="50" coveredconditionals="7" methods="26" coveredmethods="12"/>
         <file name="DataViewTable.js" path="/home/lyang/Src/Sample-1525/src/components/shared/DataViewTable.js">
-          <metrics statements="109" coveredstatements="47" conditionals="50" coveredconditionals="7" methods="26" coveredmethods="12"/>
+          <metrics statements="109" coveredstatements="48" conditionals="50" coveredconditionals="7" methods="26" coveredmethods="12"/>
           <line num="12" count="1" type="stmt"/>
           <line num="13" count="1" type="stmt"/>
           <line num="14" count="1" type="stmt"/>
@@ -74,7 +74,7 @@
           <line num="66" count="0" type="stmt"/>
           <line num="69" count="1" type="stmt"/>
           <line num="70" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="71" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
           <line num="72" count="0" type="stmt"/>
           <line num="73" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="74" count="0" type="stmt"/>
@@ -151,8 +151,8 @@
           <line num="259" count="2" type="stmt"/>
           <line num="265" count="2" type="stmt"/>
           <line num="266" count="3" type="stmt"/>
-          <line num="287" count="1" type="stmt"/>
-          <line num="302" count="1" type="stmt"/>
+          <line num="288" count="1" type="stmt"/>
+          <line num="303" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -258,13 +258,14 @@ export default class DataViewTable extends React.Component {
   render() {
     var divStyle = {
       color: 'white',
-      width: '1024px',
+      width: '100%',
       display: 'block'
     };
 
     return (
       <div className="cdm-DVT" style={divStyle} ref={(dom) => { this.rtDOM = dom; }}>
         <ReactTable
+          style={divStyle}
           className="-highlight"
           noDataText={this.props.noDataText}
           data={this.props.data}
